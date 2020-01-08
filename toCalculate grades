@@ -1,0 +1,59 @@
+package login;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+
+public class Schoolgrade 
+{
+
+	
+	public  Schoolgrade( int p, int c, int b, int m, int cs)
+	{
+		System.out.println("Enter the marks");
+
+		 Scanner in = new  Scanner(System.in);
+		 p= in.nextInt();
+		 
+		 c=in.nextInt();
+		 b=in.nextInt();
+		 m=in.nextInt();
+		 cs=in.nextInt();
+		 
+		 int  subnum =5;
+		if (p == 0 || p >100 || c ==0 ||  c >100 || b ==0 || c>100  || b ==0 || m == 0 || m >100 || cs ==0 || cs>100)
+		{
+			System.out.println("invalid Marks ");
+		}else
+		{
+			int total = (p + c +b + m+ cs );
+			int percentage = (total/5) ;
+			
+			if (percentage >= 90)
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade A " );
+			}else if (percentage >=80)
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade B " );
+			}else if(percentage >= 70)
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade C " );
+			}else if (percentage >=60)
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade D " );
+			}else if (percentage>=40)
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade E " );
+			}else 
+			{
+				System.out.println(" Total Marks is -->" +total + "---> " + "percentage  "+ percentage +"%" + " -->"+"Grade F " );
+			}
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		Schoolgrade gr = new Schoolgrade(0, 0, 0, 0, 0);
+	
+	}
+}

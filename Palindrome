@@ -1,0 +1,33 @@
+package DemoPackage;
+
+public class palindrome 
+{
+	String getRev(String a)
+	{
+		String rev = "";
+		int len = a.length();
+		
+		for(int i=len-1;i>=0;i--)
+		{
+			rev =rev +a.charAt(i);
+			
+		}
+		return rev;
+	
+	}
+	public static void main(String[] args)
+	{
+	String m ="MADAM";
+		palindrome obj = new palindrome();
+		String reveseSt=(obj.getRev(m));
+		if (m.equals(reveseSt))
+		{
+			System.out.println("Palindrome"+" reverse"+" - "+reveseSt+"Original"+"- "+m);
+		}else
+		{
+			System.out.println("Given string is not a Palindrome");
+		}
+		
+	}
+	
+}

@@ -1,1 +1,24 @@
 
+package DemoPackage;
+
+public class stringreverse
+
+{
+
+	 static String s = "ASHWINI";
+	 static String rev="";
+	 static int len = s.length();
+	
+	public static void main (String[] args)
+	{
+
+		
+		for (int m=len-1;m>=0;m--)
+		{
+			rev = rev + s.charAt(m);
+		}
+		
+		System.out.println(rev);
+	
+	}
+}

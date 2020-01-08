@@ -1,0 +1,29 @@
+package login;
+
+public class SumofArray {
+	/*
+	 * @author: Ashwini
+	 * @description : Sum of numbers in an array
+	 */
+	
+	public int calculateSum(int arr[])
+	{
+		int total=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			total = total+arr[i];
+			
+		}
+		return total;
+		
+	}
+	public static void main(String[] args) {
+	
+		int arr[] = {2,5,8,7,4};
+		SumofArray obj = new SumofArray();
+		int sum = obj.calculateSum(arr);
+		System.out.println(sum);
+		
+	}
+
+}
